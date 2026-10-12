@@ -40,6 +40,13 @@
             android:layout_marginTop="20dp"
             android:id="@+id/btnLogin"
             android:text="Login"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnRegister"
+            style="?attr/materialButtonOutlinedStyle"
+            android:text="Register"/>
     </LinearLayout>
 
 

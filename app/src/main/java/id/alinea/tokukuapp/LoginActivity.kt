@@ -10,10 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.serialization.descriptors.PrimitiveKind
 
 class LoginActivity : AppCompatActivity() {
-    private lateinit var auth: FirebaseAuth;
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,6 +26,11 @@ class LoginActivity : AppCompatActivity() {
         val edtEmail = findViewById<EditText>(R.id.edtEmail)
         val edtPassword = findViewById<EditText>(R.id.edtPassword)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val btnRegister = findViewById<Button>(R.id.btnRegister)
+
+        btnRegister.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
 
         btnLogin.setOnClickListener {
             val email = edtEmail.text.toString().trim()
